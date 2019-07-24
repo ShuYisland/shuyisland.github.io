@@ -1,10 +1,14 @@
+<div class="page-bottom clearfix">
+  <div class="row">
+   <p class="copyright">Copyright &copy; 2015
+Powered by <a target="_blank" href="http://www.mweb.im">MWeb</a>,&nbsp; 
+Theme used <a target="_blank" href="http://github.com">GitHub CSS</a>.</p>
+  </div>
+</div>
+
+        </section>
       </div>
-			<footer id="footer" class="inner">Copyright &copy; 2014
-Powered by <a target="_blank" href="http://www.mweb.im">MWeb</a> &nbsp;&nbsp; 
-Theme by <a href="http://shashankmehta.in/archive/2012/greyshade.html">Shashank Mehta</a>
-      </footer>
-		</div>
-	</div>
+    </div>
 
 {% if ext_disqus_shortname.length %}
 <script type="text/javascript">
@@ -42,8 +46,27 @@ var duoshuoQuery = {short_name:'{{ ext_duoshuo_shortname }}'};
   })();
   </script>
 {% /if %}    
-{{ seqAndFlowChartSupport }}
+
+    <script src="asset/js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+      function fixSidebarHeight(){
+        var w1 = $('.markdown-body').height();
+          var w2 = $('#sidebar').height();
+          if (w1 > w2) { $('#sidebar').height(w1); };
+      }
+      $(function(){
+        fixSidebarHeight();
+      })
+      $(window).load(function(){
+          fixSidebarHeight();
+      });
+     
+    </script>
+
+    {{ seqAndFlowChartSupport }}
 {{ mathJaxSupport }}
 {{ siteOther }}
-</body>
+
+  </body>
 </html>

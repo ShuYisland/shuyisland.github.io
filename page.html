@@ -1,11 +1,17 @@
-<div id="content" class="inner">
+<script type="text/javascript">
+	$(function(){
+		var currentURL = '{{post.url}}';
+		currentURL = currentURL.substr(0,currentURL.length-5);
+		$('#menu_item_'+currentURL).addClass('is_active');
+	});
+</script>
+<div class="row">
 
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-	<h1 class="title" itemprop="name">{{post.title}}</h1>
-	<div class="entry-content" itemprop="articleBody">
-		{{ post.content }}
-	</div>
+    <div id="single-page-wrap">
+        <h1>{{post.title}}</h1>
 
-</article>
-
-</div>
+        <div class="markdown-body post-page">
+        {{ post.content }}
+        </div>
+    </div>
+</div>              
