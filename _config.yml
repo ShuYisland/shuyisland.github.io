@@ -1,68 +1,131 @@
-permalink: /:title/
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: Simple Blog Theme
+email: your-email@domain.com
+description: > # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for SEO optimization) and in your feed.xml site description.
+baseurl: "/jekyll-theme-simple-blog" # change this to the subpath of your site, e.g. /blog. Leave it empty if you don't need it.
+url: "https://lorepirri.gitlab.io" # change this to the base hostname & protocol for your site
+
+# Build settings
 markdown: kramdown
-highlighter: pygments
 
-paginate: 2 #6
-comments: true
-paginate_path: "/page/:num"
+# Make sure to exclude 'vendor' from the build
+exclude: [vendor, "Gemfile", "Gemfile.lock"]
 
-baseurl: "/nandomoreira-jekyll-theme" # change to empty string ""
-domain_name: nandomoreira.me
-google_analytics: UA-52446115-1
+# permalink: /:categories/:year/:month/:day/:title.html
+# none is equivalent to /:title.html
+# https://jekyllrb.com/docs/permalinks
+permalink: /:title.html
 
-source: source
-destination: _site
+# jekyll-theme-simple-blog date format
+# refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
+jekyll-theme-simple-blog:
+  date_format: "%b %-d, %Y"
 
-# cover: /assets/images/header-cover.png
+theme: # leave it empty
 
-# site title, description, meta_description, meta_keywords
-# Details for the RSS feed generator
-name: Fernando Moreira
-title: Fernando Moreira | Desenvolvimento Web e tudo mais..
-description: "Desenvolvedor Front-end/Wordpress, Design Responsivo, HTML5, CSS3 e JavaScript"
-meta_description: "Desenvolvedor Front-end/Wordpress, Design Responsivo, HTML5, CSS3 e JavaScript"
-meta_keywords: "site, website, loja virtual, lojas virtuais, e-commerce, wordpress, frontend, front-end, html5, css3, javascript, jquery, seo, otimizacao, performance"
-url: http://nandomoreira.me
-production_url: http://nandomoreira.me
-repo: https://github.com/nandomoreirame/nandomoreira-jekyll-theme
-disqus_shortname: "nandothemes"
-rss_path: source/
+header_page_refs: ['coding','projects','about']
+
+plugins:
+  - jekyll-target-blank
+
+target-blank:
+    rel: nofollow
+
+show_post_image_posts_list: false
+
+header:
+  image: /assets/patterns/symphony.png
+
+# social
 author:
-  name: Fernando Moreira
-  image: /assets/images/author.jpg
-  email: nandomoreira.me@gmail.com
-  url: http://nandomoreira.me
-  facebook: http://facebook.com/fernando.dev
-  twitter: http://twitter.com/nandomoreirame
-  instagram: http://instagram.com/nandomoreira.me
-  github: http://github.com/nandomoreirame
-  linkedin: http://linkedin.com/in/nandomoreirame
-  bio: "Desenvolvedor Front-end/Wordpress entusiasta de performance, design responsivo e usabilidade, sempre em busca do melhor projeto e de um bom café."
+  name: "Simple Blog Theme"
+  short_bio:
+    en: Jekyll Blog Theme, Responsive
+    it: Jekyll Blog Theme, Responsive
+  picture: assets/img/profile-60.png
 
-# thought
-thought:
-  text: I have no special talent. I am only passionately curious.
-  author: Albert Einstein
+image: /assets/img/profile-225.png
 
-# Plugin: jekyll-assets
-assets:
-  dirname: /assets
-  baseurl: /nandomoreira-jekyll-theme/assets/ # change to /assets/
-  sources:
-    - assets/images
-    - assets/fonts
-    - assets/css
-    - assets/js
-  cache: true
-  gzip: [ text/css, application/javascript ]
+#twitter:
+#  username:
+#instagram_username:
 
-# Compress HTML
-compress_html:
-  clippings: all
-  comments: all
-  endings: all
-  profile: false
-  ignore:
-    envs: all
+#linkedin_username: hereyourlinkedin-id-only
 
-exclude: ["gulp", "node_modules", "bower", "bower_components", "config.rb", "src", "Gemfile", "Gemfile.lock", ".rvmrc", ".rbenv-version", "package.json", "gulpfile.js", "README.md", "Rakefile", "changelog.md"]
+# gitlab on site
+gitlab:
+  owner_url: https://gitlab.com/lorepirri
+
+# github on site
+github:
+  owner_url: https://github.com/lorepirri
+
+
+# translation
+
+t:
+  en:
+    latest-posts:  "Latest Posts"
+    read-more:  "Read More →"
+    show-more:  "Show More →"
+    loading:  "Loading..."
+    on-word: "on"
+    contact: "Contact"
+    contact-page: "contact.md"
+    read-time: "min read"
+    comments: "comments"
+    go-to-home-page: "Go to the Home Page"
+    months:
+      january: "Jan"
+      february: "Feb"
+      march: "Mar"
+      april: "Apr"
+      may: "May"
+      june: "Jun"
+      july: "Jul"
+      august: "Aug"
+      september: "Sep"
+      october: "Oct"
+      november: "Nov"
+      december : "Dec"
+  it:
+    latest-posts:  "Ultimi Posts"
+    read-more:  "Leggi →"
+    show-more:  "Mostra →"
+    loading:  "Caricamento..."
+    on-word: "su"
+    contact: "Contatta"
+    contact-page: "contatta.md"
+    read-time: "min di lettura"
+    comments: "commenti"
+    go-to-home-page: "Vai alla Pagina Iniziale"
+    months:
+      january: "Gen"
+      february: "Feb"
+      march: "Mar"
+      april: "Apr"
+      may: "Mag"
+      june: "Giu"
+      july: "Lug"
+      august: "Ago"
+      september: "Set"
+      october: "Ott"
+      november: "Nov"
+      december : "Dic"
+
+defaults:
+  -
+    scope:
+      type: "posts"
+    values:
+      lang: "en"
+      category: articles

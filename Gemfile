@@ -1,8 +1,6 @@
-source 'http://rubygems.org'
+source "https://rubygems.org"
 
-gem 'jekyll', '~> 2.5.3'
-gem 'jekyll-assets'
+gem 'jekyll', '3.6.3' # this is the Jekyll version we are working with
+# gem 'nokogiri', '1.6.7.2' # Nokogiri is a dependency that might cause errors if it's not added to the script
 
-gem 'rake', '~> 12.3.0'
-gem 'compass', '~> 1.0.3'
-gem 'sass', '~> 3.4.10'
+gem 'jekyll-target-blank'
