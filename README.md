@@ -1,135 +1,170 @@
-![Jekyll Version](https://img.shields.io/badge/Jekyll-3.1.2-red.svg)
-![Build Status](https://gitlab.com/jekyll-themes/default-bundler/badges/master/build.svg)
+Zolan - Modern & Minimal Theme for Jekyll
+======
+Zolan is a minimal blog theme for Jekyll.
 
-----
+* * *
 
-View Demo: https://lorepirri.gitlab.io/jekyll-theme-simple-blog/
+Table of Contents
+-----------------
+*   [Features](#features)
+*   [Demo](#demo)
+*   [Deployment](#deployment)
+*   [Posts](#posts)
+*   [Disqus Comments](#DisqusComments)
+*   [Instagram](#instagram)
+*   [Google Analytics](#GoogleAnalytics)
+*   [Update favicon](#UpdateFavicon)
+*   [Credits](#Credits)
+*   [Support](#Support)
 
------
-# Simple Blog Theme
+* * *
 
-*Simple Blog is a Jekyll theme for Gitlab or GitHub Pages. It is based on [Cayman Blog Theme](https://github.com/lorepirri/cayman-blog). You can [preview the theme to see what it looks like](https://lorepirri.gitlab.io/jekyll-theme-simple-blog/), or even [use it today](#install).*
+### Features
 
-<img src="https://gitlab.com/lorepirri/jekyll-theme-simple-blog/raw/master/simple-blog-theme.png" alt="Thumbnail of jekyll-theme-simple-blog" style="max-width:30%; border: 1px solid grey;"/>
+* 100% responsive and clean theme
 
-## Features
+* Optimized for mobile devices
 
-- Blog
-- Responsive
-- Minimal
-- Multi-language
-- SEO optimized
-- Social buttons (instagram, linkedin, twitter, github, gitlab)
-- RSS feed multi-language
+* Minimal design
 
-## Install
+* Valid HTML5 code
 
-Simple Blog Theme is 100% compatible with GitLab and GitHub Pages.
+* Post sharing
 
-### Install as a Fork
+* Subscription form
 
-1. [Fork the repo](https://gitlab.com/lorepirri/jekyll-theme-simple-blog)
-2. Clone down the repo with one of the two:
-    * ssh `$ git clone git@gitlab.com:your-username/jekyll-theme-simple-blog.git`
-    * https: `$ git clone https://gitlab.com/lorepirri/jekyll-theme-simple-blog.git`
-3. Empty the `_posts/` folder
-4. Install bundler and gems with `$ script/bootstrap`
-5. Run Jekyll with `$ script/server`
-6. Modify `_config.yml`, `about-en.md`, `contact-en.md`, and the other pages for your project
-6. Write your posts in `_posts/en` and `_posts/<other-language>`
-7. [Customize the theme](customizing)
+* Supports Disqus Comments
 
-### SEO tags
+* Instagram Feed
 
-Simple Blog includes simple SEO tags from [jekyll-social-metatags](https://github.com/lorepirri/jekyll-social-metatags). Have a look at the page for its usage.
+* Ionicons Icons
 
-The usage is compatible with the plugin [Jekyll SEO Tag](https://github.com/jekyll/jekyll-seo-tag), which provides a battle-tested template of crowdsourced best-practices.
-
-To switch to a better SEO tags however, one should install [Jekyll Feed plugin](https://github.com/jekyll/jekyll-feed):
-
-1. Add this line to your site's Gemfile:
-
-    ```ruby
-    gem 'jekyll-seo-tag'
-    ```
-
-2. And then add this line to your site's `_config.yml`:
-
-    ```yml
-    gems:
-      - jekyll-seo-tag
-    ```
-
-3. Replace with the following, the `<!-- jekyll-seo-tag -->` comment in your site's `default.html`:
-
-      ```liquid
-      {% seo %}
-      ```
-
-For more information about configuring this plugin, see the official [Jekyll SEO Tag](https://github.com/jekyll/jekyll-seo-tag) page.
+* Google Fonts
 
 
-### Stylesheet
+* * *
 
-If you'd like to add your own custom styles:
+### Demo
 
-1. Create a file called `/assets/css/style.scss` in your site
-2. Add the following content to the top of the file, exactly as shown:
-    ```scss
-    ---
-    ---
+Check the theme in action [Demo](https://zolan-jekyll.netlify.app/)
 
-    @import "{{ site.theme }}";
-    ```
-3. Add any custom CSS (or Sass, including imports) you'd like immediately after the `@import` line
+![Main page preview](https://github.com/artemsheludko/zolan/blob/master/images/zolan-main-page.png?raw=true)
 
-### Layouts
+The post page would look like this:
 
-If you'd like to change the theme's HTML layout:
+![Post page preview](https://github.com/artemsheludko/zolan/blob/master/images/zolan-post.png?raw=true)
 
-1. [Copy the original template](https://gitlab.com/lorepirri/jekyll-theme-simple-blog/blob/master/_layouts/default.html) from the theme's repository<br />(*Pro-tip: click "raw" to make copying easier*)
-2. Create a file called `/_layouts/default.html` in your site
-3. Paste the default layout content copied in the first step
-4. Customize the layout as you'd like
+* * *
 
-### Sass variables
+### Deployment
 
-If you'd like to change the theme's [Sass variables](https://gitlab.com/lorepirri/jekyll-theme-simple-blog/blob/master/_sass/variables.scss), set new values before the `@import` line in your stylesheet:
+To run the theme locally, navigate to the theme directory and run `bundle install` to install the dependencies, then run `jekyll serve` or `bundle exec jekyll serve` to start the Jekyll server.
 
-```scss
-$section-headings-color: #0086b3;
+I would recommend checking the [Deployment Methods](https://jekyllrb.com/docs/deployment-methods/) page on Jekyll website.
 
-@import "{{ site.theme }}";
-```
+* * *
 
-## Roadmap
+### Posts
 
-See the [open issues](https://gitlab.com/lorepirri/jekyll-theme-simple-blog/issues) for a list of proposed features (and known issues).
+To create a new post, you can create a new markdown file inside the \_posts directory by following the [recommended file structure](https://jekyllrb.com/docs/posts/#creating-post-files).
 
-## Project philosophy
-
-The Simple Blog Theme is intended to make it quick and easy for Gitlab or GitHub Pages users to create their first (or 100th) website. The theme should meet the vast majority of users' needs out of the box, erring on the side of simplicity rather than flexibility, and provide users the opportunity to opt-in to additional complexity if they have specific needs or wish to further customize their experience (such as adding custom CSS or modifying the default layout). It should also look great, but that goes without saying.
-
-## Contributing
-
-Interested in contributing to Simple Blog? We'd love your help. Simple Blog is an open source project, built one contribution at a time by users like you. See [the CONTRIBUTING file](CONTRIBUTING.md) for instructions on how to contribute.
-
-### Previewing the theme locally
-
-If you'd like to preview the theme locally (for example, in the process of proposing a change):
-
-1. Clone down the theme's repository (`git clone https://gitlab.com/lorepirri/jekyll-theme-simple-blog`)
-2. `cd` into the theme's directory
-3. Run `script/bootstrap` to install the necessary dependencies
-4. Run `script/server` to start the preview server
-5. Visit [`localhost:4000`](http://localhost:4000) in your browser to preview the theme
+      ---
+      layout: post
+      title: Time to give gifts to everyone
+      date: 2018-08-23 16:04:00 +0300
+      image: 03.jpg
+      tags: Life
+      ---
 
 
-[`.gitlab-ci.yml`]: https://gitlab.com/jekyll-themes/default-bundler/blob/master/.gitlab-ci.yml
-[`Gemfile`]: https://gitlab.com/jekyll-themes/default-bundler/blob/master/Gemfile
-[`.gitignore`]: https://gitlab.com/jekyll-themes/default-bundler/blob/master/.gitignore
-[`_config.yml`]: https://gitlab.com/jekyll-themes/default-bundler/blob/master/_config.yml
+You can set the tags and the post image.
 
-[Bundler]: http://bundler.io/
-[Jekyll]: http://jekyllrb.com/
-[jek-312]: https://rubygems.org/gems/jekyll/versions/3.1.2
+Add post images to **/images/** directory.
+
+For tags, try to not add space between two words, for example, `Ruby on Rails`, could be something like (`ruby-on-rails`, `Ruby_on_Rails`, or `Ruby-on-Rails`).
+
+* * *
+
+### Disqus Comments
+
+Zolan Theme comes with Disqus comments enabled.
+
+Open `_data/settings.yml` file, and change the `mr-brown` value on line 26 with your [Disqus account shortname](https://help.disqus.com/customer/portal/articles/466208).
+
+      Comment Section (Disqus)
+      disqus-identifier: mr-brown # Add your shortname for Disqus Comment. For example mr-brown
+
+
+That’s all you need to setup Disqus from the theme side. If you get any issue regarding that comments are unable to load. First, make sure you have [registered your website with Disqus (Step 1)](https://help.disqus.com/customer/portal/articles/466182-publisher-quick-start-guide).
+
+And also check [Disqus troubleshooting guide](https://help.disqus.com/customer/portal/articles/472007-i-m-receiving-the-message-%22we-were-unable-to-load-disqus-%22) if you still have issues.
+
+* * *
+
+### Instagram
+
+The Instagram feed is working using [Instafeed.js](http://instafeedjs.com/) to show the photos.
+
+First, you will need to get your account `userId` and `accessToken` from the following URLs:
+
+*   userId: [http://codeofaninja.com/tools/find-instagram-user-id/](http://codeofaninja.com/tools/find-instagram-user-id/)
+*   accessToken: [instagram.pixelunion.net](http://instagram.pixelunion.net/)
+
+Second, open the `js/common.js` file and replace the `userId` and `accessToken` values.
+
+    var instagramFeed = new Instafeed({
+          get: 'user',
+          limit: 6,
+          resolution: 'standard_resolution',
+          userId: '8987997106',
+          accessToken: '8987997106.924f677.8555ecbd52584f41b9b22ec1a16dafb9',
+          template: ''
+    });
+
+
+Third, open the `_data/settings.yml` file and replace the `instafeed: false` on `instafeed: true` value.
+
+    # Instagram Feed
+    instafeed: false # To enable the instafeed, use the value true. To turn off use the value false.
+
+
+* * *
+
+### Google Analytics
+
+To integrate Google Analytics, open `_data/settings.yml`, and add your Google Analytics identifier.
+
+    # Google Analytics
+    google-analytics: # Add your identifier. For example UA-99631805-1
+
+
+* * *
+
+### Update favicon
+
+You can find the current favicon (favicon.ico) inside the theme root directory, just replace it with your new favicon.
+
+* * *
+
+### Credits
+
+I have used the following scripts, fonts or other files as listed.
+
+*   [Google Fonts](https://fonts.google.com/specimen/Nunito) (Roboto, Sans Serif).
+*   [Ionicons Icons](https://ionicons.com/)
+*   [FitVids.js](http://fitvidsjs.com/)
+*   [Medium’s Image Zoom](https://github.com/fat/zoom.js)
+*   [Instafeed.js](http://instafeedjs.com/)
+*   [jQuery.com](https://jquery.com/)
+*   Preview Images form [unsplash.com](https://unsplash.com/), [pexels.com](https://www.pexels.com/)
+
+* * *
+### License
+
+Mit License
+
+* * *
+
+### Support
+<p>If you like the themes that I create you can become my sponsor on <a href="https://www.patreon.com/artemsheludko" target="_blank">Patreon</a>.
+<p align="center"><b>Thank you for your support ❤️</b></p>
